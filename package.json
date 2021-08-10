@@ -14,11 +14,18 @@
   },
   "homepage": "https://github.com/arajput96/Solo-Project#readme",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.49.0"
   },
   "dependencies": {
+    "css-loader": "^6.2.0",
     "express": "^4.17.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1"
   }
 }

@@ -3,9 +3,7 @@
   "description": "Aim Training CRUD App",
   "version": "1.0.0",
   "main": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arajput96/Solo-Project.git"
@@ -15,8 +13,12 @@
     "url": "https://github.com/arajput96/Solo-Project/issues"
   },
   "homepage": "https://github.com/arajput96/Solo-Project#readme",
-
   "devDependencies": {
     "webpack": "^5.49.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

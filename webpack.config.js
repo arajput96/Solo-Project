@@ -26,5 +26,6 @@ module.exports = {
   },//this closes module property
   devServer: {
     publicPath: '/build/',
+    hot: true,
   }
 };

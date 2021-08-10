@@ -3,10 +3,6 @@
   "description": "Aim Training CRUD App",
   "version": "1.0.0",
   "main": "",
-
-  "devDependencies": {
-    "webpack": "^5.49.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/arajput96/Solo-Project/issues"
   },
-  "homepage": "https://github.com/arajput96/Solo-Project#readme"
+  "homepage": "https://github.com/arajput96/Solo-Project#readme",
+
+  "devDependencies": {
+    "webpack": "^5.49.0"
+  }
 }

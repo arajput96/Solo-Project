@@ -22,6 +22,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [ "style-loader", "css-loader", "sass-loader" ], 
+      },
+      {
+        test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ]
       }
     ]
   },//this closes module property

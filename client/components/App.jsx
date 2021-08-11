@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+// import React, { useState } from 'react';
+import GameBoard from './GameBoard.jsx';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+  }
   render() {
     return (
-      <div>In the End, It Doesn't Even Matter</div>
+      <div>
+        <GameBoard/>
+        {/* Test App JSX */}
+      </div>
     )
   }
 }

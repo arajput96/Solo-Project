@@ -5,23 +5,33 @@ class Circle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      leftLocation: null,
-      topLocation: null,
+      leftLocation: 444,
+      topLocation: 444,
     }
   }
 
-  componentDidUpdate() {
+  // componentDidUpdate() {
+  // }
 
+  handleButtonClick() {
+    function randomizePos() {
+      return Math.floor(Math.random()*444);
+    }
+    this.setState({leftLocation: randomizePos(), topLocation: randomizePos()});
+    this.props.scoreHandler();
   }
 
   render() {
     return (
-      <Fab color="primary" 
+      <Fab
+        color="primary" 
         style={{
           postion:'absolute',
-          left:'100px',
-          top:'100px'
+          left: `${this.state.leftLocation}px`,
+          top: `${this.state.topLocation}px`,
+          transitionDelay: `5ms`
         }}
+        onClick={() => this.handleButtonClick()}
       ></Fab>
     )
   }

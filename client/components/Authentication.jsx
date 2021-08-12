@@ -1,7 +1,7 @@
 import { Box, Button, Paper } from '@material-ui/core';
 import React, { Component } from 'react';
 import { TextField } from '@material-ui/core';
-import 'regenerator-runtime/runtime'
+import 'regenerator-runtime/runtime';
 
 class Authentication extends Component {
   constructor(props){
@@ -12,7 +12,8 @@ class Authentication extends Component {
       password: ''
     }
 
-    this.handleLogin = this.handleLogin.bind(this)
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogin = this.handleSignup.bind(this)
   }
 
   // hnadleChangeUsername(e) {
@@ -30,6 +31,18 @@ class Authentication extends Component {
   //   console.log(`Username: ${this.state.username} Password: ${this.state.password}`);
   // }
 
+  async handleSignup() {
+    const data = {username: document.getElementById('usernameBox').value, password: document.getElementById('passwordBox').value}
+    console.log(data)
+    await fetch('/signup', {
+      method: 'POST',
+      header: {'Content-Type': 'Application/JSON'},
+      body: JSON.stringify({username: data.username, password: data.password})
+    })
+      .then(() => console.log('Successful Signup'))
+      .catch((err) => console.log('handleSignup error ', err));
+  }
+
   async handleLogin() {
     await this.setState({username: document.getElementById('usernameBox').value, password: document.getElementById('passwordBox').value});
     console.log(`Username: ${this.state.username} Password: ${this.state.password}`);
@@ -40,8 +53,9 @@ class Authentication extends Component {
       <Box width='100%' display='flex' alignItems='flex-start' justifyContent='flex-end'>
           {/* <form onSubmit={this.handleSubmit}> */}
             <TextField id='usernameBox' label='Username'style={{marginRight:'10px'}}></TextField>
-            <TextField id='passwordBox' label='Password' type='password'></TextField>
-            <Button onClick={this.handleLogin} variant='contained' color='primary' style={{marginTop:'11px'}} >Submit</Button>
+            <TextField id='passwordBox' label='Password' type='password'style={{marginRight:'10px'}}></TextField>
+            <Button onClick={this.handleLogin} variant='contained' color='primary' style={{marginTop:'11px', marginRight: '10px'}} >Login</Button>
+            <Button onClick={this.handleSignup} variant='contained' color='secondary' style={{marginTop:'11px'}} >Sign Up</Button>
           {/* </form> */}
       </Box>
     )

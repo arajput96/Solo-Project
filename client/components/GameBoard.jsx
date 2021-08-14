@@ -33,7 +33,7 @@ class GameBoard extends Component {
           <Button variant='contained' color='primary'>Score: {this.state.score}</Button>
         </Box>
         
-        <Box width='500px' height ='500px' bgcolor ='error.main' border={3}>
+        <Box width='500px' height ='500px' bgcolor ='success.main' border={3}>
           <Circle scoreHandler={this.scoreHandler}/>
         </Box> 
       </Container>

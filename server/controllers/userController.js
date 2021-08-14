@@ -22,7 +22,7 @@ userController.getAllUsers = (req, res, next) => {
 * createUser - create and save a new User into the database.
 */
 userController.createUser = async (req, res, next) => {
-  console.log('CreateUser req.body: ', req.body);
+  console.log('CreateUser req: ', req);
   try {
     const doc = await User.create({
       username: req.body.username,

@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get('/assets', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../assets/gfuel2.jpeg'));
+});
+
 
 app.post('/signup', userController.createUser, (req, res) => {
   // what should happen here on successful sign up?
